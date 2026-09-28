@@ -1,0 +1,18 @@
+# Build context allowlist: never copy local credentials, history or recordings.
+**
+!package.json
+!package-lock.json
+!index.html
+!tsconfig*.json
+!vite.config.ts
+!src/
+!src/**
+!server/
+!server/**
+!public/
+!public/**
+!scripts/
+!scripts/setup.mjs
+!scripts/check-renderer.mjs
+!scripts/build-icons.mjs
+**/*.bak

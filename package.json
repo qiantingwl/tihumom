@@ -1,0 +1,43 @@
+{
+  "name": "tihumom",
+  "version": "0.2.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n WEB,API -c cyan,green \"vite --host 127.0.0.1\" \"tsx watch server/index.ts\"",
+    "build": "vue-tsc -b && vite build",
+    "start": "node --env-file-if-exists=.env --import tsx server/index.ts",
+    "test": "tsx --test tests/*.test.ts",
+    "setup": "node scripts/setup.mjs",
+    "check:renderer": "node scripts/check-renderer.mjs",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "dependencies": {
+    "@fastify/cookie": "^11.1.2",
+    "@fastify/static": "^10.1.4",
+    "@lucide/vue": "^1.0.0",
+    "@types/qrcode": "^1.5.6",
+    "fastify": "^5.6.1",
+    "ipaddr.js": "^2.5.0",
+    "parse5": "^7.3.0",
+    "playwright": "1.63.0",
+    "pngjs": "^7.0.0",
+    "qrcode": "^1.5.4",
+    "tsx": "^4.19.2",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "concurrently": "^9.1.0",
+    "prettier": "^3.6.2",
+    "typescript": "~5.7.2",
+    "vite": "^6.4.3",
+    "vue-tsc": "^2.2.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
